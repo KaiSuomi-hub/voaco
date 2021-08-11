@@ -1,0 +1,1 @@
+var1={:6:value}&var2={:7:value}&var3={:20:value}

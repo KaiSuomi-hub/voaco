@@ -148,60 +148,47 @@
         <!-- kun klikkaa nakyy vihje hidden div -->
 <script>
 // luodaan Array
-// const tipit =
-// ["#Kuiva",
-// "#Atooppinen",
-// "#Rasvoittuva",
-// "#Normaali",
-// "#Sekalainen"
-// ]
-// // tehaan functio joka piilottaa
-// function piilota() {
-//     $(tipit[0]).hide();    
-//     console.log(tipit[0]);
-//     $(tipit[1]).hide();    
-//     $(tipit[2]).hide();    
-//     $(tipit[3]).hide();    
-//     $(tipit[4]).hide();    
-// }
-// // ajetaan foreach Arraylle
-// // tipit.forEach(piilota);
+const tipit =
+["#Kuiva",
+"#Atooppinen",
+"#Rasvoittuva",
+"#Normaali",
+"#Sekalainen"
+]
+// tehaan functio joka piilottaa
+function piilota() {
+    $(tipit[0]).hide();    
+    console.log(tipit[0]);
+    $(tipit[1]).hide();    
+    $(tipit[2]).hide();    
+    $(tipit[3]).hide();    
+    $(tipit[4]).hide();    
+}
+// ajetaan foreach Arraylle
+// tipit.forEach(piilota);
 
 
-        $( "#Kuiva" ).on( "click", function() {
-            $("#hidden5").hide();
-            $("#hidden4").hide();
-            $("#hidden3").hide();
-            $("#hidden2").hide();
-            $("#hidden1").fadeIn();
+            $("#Kuiva").on('click', function () {
+            $("class.tip").hide();
+            var targetDiv = $(this).attr('rel');
+            $("." + targetDiv).show();
             });
+
         $( "#Atooppinen" ).on( "click", function() {
-            $("#hidden5").hide();
-            $("#hidden4").hide();
-            $("#hidden3").hide();
-            $("#hidden2").fadeIn();
-            $("#hidden1").hide();
+            tipit.forEach(piilota);
+            $("#hidden2").show();
         });
         $( "#Rasvoittuva" ).on( "click", function() {
-            $("#hidden5").hide();
-            $("#hidden4").hide();
-            $("#hidden3").fadeIn();
-            $("#hidden2").hide();
-            $("#hidden1").hide();
+            tipit.forEach(piilota);
+            $("#hidden3").show();
         });
         $( "#Normaali" ).on( "click", function() {
-            $("#hidden5").hide();
-            $("#hidden4").fadeIn();
-            $("#hidden3").hide();
-            $("#hidden2").hide();
-            $("#hidden1").hide();
+            tipit.forEach(piilota);
+            $("#hidden4").show();
         });
         $( "#Sekalainen" ).on( "click", function() {
-            $("#hidden5").fadeIn();
-            $("#hidden4").hide();
-            $("#hidden3").hide();
-            $("#hidden2").hide();
-            $("#hidden1").hide();
+            tipit.forEach(piilota);
+            $("#hidden5").show();
         });
 </script>
 </body>

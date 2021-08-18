@@ -169,39 +169,31 @@
 
 
         $( "#Kuiva" ).on( "click", function() {
-            $("#hidden5").hide();
-            $("#hidden4").hide();
-            $("#hidden3").hide();
-            $("#hidden2").hide();
+            $("#hidden5").fadeOut();
+            $("#hidden4").fadeOut();
+            $("#hidden3").fadeOut();
+            $("#hidden2").fadeOut();
             $("#hidden1").fadeIn();
             });
         $( "#Atooppinen" ).on( "click", function() {
+            tipit.forEach(piilota);
             $("#hidden5").hide();
             $("#hidden4").hide();
             $("#hidden3").hide();
-            $("#hidden2").fadeIn();
-            $("#hidden1").hide();
+            $("#hidden2").hide();
+            $("#hidden1").h();
         });
         $( "#Rasvoittuva" ).on( "click", function() {
-            $("#hidden5").hide();
-            $("#hidden4").hide();
-            $("#hidden3").fadeIn();
-            $("#hidden2").hide();
-            $("#hidden1").hide();
+            tipit.forEach(piilota);
+            $("#hidden3").show();
         });
         $( "#Normaali" ).on( "click", function() {
-            $("#hidden5").hide();
-            $("#hidden4").fadeIn();
-            $("#hidden3").hide();
-            $("#hidden2").hide();
-            $("#hidden1").hide();
+            tipit.forEach(piilota);
+            $("#hidden4").show();
         });
         $( "#Sekalainen" ).on( "click", function() {
-            $("#hidden5").fadeIn();
-            $("#hidden4").hide();
-            $("#hidden3").hide();
-            $("#hidden2").hide();
-            $("#hidden1").hide();
+            tipit.forEach(piilota);
+            $("#hidden5").show();
         });
 </script>
 </body>

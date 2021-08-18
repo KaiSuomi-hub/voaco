@@ -1,0 +1,143 @@
+$lg: #40CB8B
+$dg: #218C5B
+$cyan: #32D8C9
+$leaf: #BFFF00
+$grass: #23C239
+$fg: #449A58
+
+.helper
+    position: absolute
+    top: 20%
+    left:10%
+
+@media (max-width: 600px )
+    .container
+        display: flex !important
+        flex-direction: column
+        justify-content: center
+        background-color: red
+
+    .item-c
+        display: none
+
+.container 
+    display: grid
+    // grid-template-columns: repeat(auto-fit, minmax(400px, 2fr))
+    grid-template-columns:1fr 1fr
+    grid-template-rows: 1fr 1fr 
+    // grid-auto-flow: columns
+    // width: 800px
+    // height: 600px
+    
+
+
+    
+.item-a         
+    height: 300px
+    width: 400px
+    background-color: #ffbfbf
+#radios
+    padding: 30px
+    
+.item-b
+    height: 300px
+    width: 400px
+    background-color: #cfffc8
+
+
+.item-c
+    height: 300px
+    width: 400px
+    background-color: #a1a1ff
+
+.scaledown
+    transform: scale(0.5)
+    background-color: #808080
+
+#button
+    position: absolute
+    left: 15%
+
+#forward, #back
+    border-radius: 50%
+
+// tips
+hidden1
+// radio starts
+
+:root
+  --color:#256d35
+
+*
+  box-sizing: border-box
+
+  &:before, &:after
+    box-sizing: border-box
+
+.radio
+  display: grid
+  grid-template-columns: -webkit-min-content auto
+  grid-template-columns: min-content auto
+  grid-gap: 0.2em
+  font-size: 1em
+  color: var(--color)
+
+  &:focus-within .radio__label
+    transform: scale(1.05)
+    opacity: 1
+
+.radio__label
+  line-height: 1.2
+  transition: 180ms all ease-in-out
+  opacity: 0.8
+//   font-size: 12px!important
+
+.radio__input
+  display: flex
+
+  input
+    opacity: 0
+    width: 0
+    height: 0
+
+    &:focus + .radio__control
+      box-shadow: 0 0 0 0.05em #257938, 0 0 0.15em 0.1em currentColor
+
+.radio-gradient input:checked + .radio__control
+  background: radial-gradient(currentcolor 50%, rgba(255, 0, 0, 0) 51%)
+
+.radio-before
+  .radio__control
+    display: grid
+    place-items: center
+
+  input
+    + .radio__control::before
+      content: ""
+      width: 0.5em
+      height: 0.5em
+      box-shadow: inset 0.5em 0.5em currentColor
+      border-radius: 50%
+      transition: 180ms transform ease-in-out
+      transform: scale(0)
+
+    &:checked + .radio__control::before
+      transform: scale(1)
+
+.radio__control
+    display: block
+    //heres the circle size
+    width: 0.7em
+    height: 0.7em
+    border-radius: 50%
+    border: 0.1em solid currentColor
+    transform: translateY(0.32em)  translateX(-0.62em)
+    // transform: translateX(-0.2em)
+
+body
+  min-height: 50vh
+  display: grid
+  place-content: center
+  grid-gap: 2rem
+  padding: 1rem
+

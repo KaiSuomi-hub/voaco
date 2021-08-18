@@ -1,0 +1,47 @@
+.helper {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+
+@media (max-width: 600px) {
+  .container {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    background-color: red;
+  }
+
+  .item-c {
+    display: none;
+  }
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.item-a {
+  height: 300px;
+  width: 400px;
+  background-color: #ffbfbf;
+}
+
+.item-b {
+  height: 300px;
+  width: 400px;
+  background-color: #cfffc8;
+}
+
+.item-c {
+  height: 300px;
+  width: 400px;
+  background-color: #a1a1ff;
+}
+
+.scaledown {
+  transform: scale(0.5);
+}
+
+#

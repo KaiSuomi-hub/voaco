@@ -1,0 +1,53 @@
+
+.helper
+    position: absolute
+    top: 20%
+    left:10%
+
+@media (max-width: 600px )
+    .container
+        display: flex !important
+        flex-direction: column
+        justify-content: center
+        background-color: red
+
+    .item-c
+        display: none
+
+.container 
+    display: grid
+    // grid-template-columns: repeat(auto-fit, minmax(400px, 2fr))
+    grid-template-columns:1fr 1fr
+    grid-template-rows: 1fr 1fr 
+    // grid-auto-flow: columns
+    // width: 800px
+    // height: 600px
+    
+
+
+    
+.item-a         
+    height: 300px
+    width: 400px
+    background-color: #ffbfbf
+
+.item-b
+    height: 300px
+    width: 400px
+    background-color: #cfffc8
+
+
+.item-c
+    height: 300px
+    width: 400px
+    background-color: #a1a1ff
+
+.scaledown
+    transform: scale(0.5)
+    background-color: #808080
+
+#button
+    position: absolute
+    left: 15%
+
+#orward
